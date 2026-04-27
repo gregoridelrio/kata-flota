@@ -33,4 +33,17 @@ class Flota
     }
     return $navesMenosVeinte;
   }
+
+  public function repararYRepostar(): array
+  {
+    $navesReparadas = [];
+    foreach ($this->naves as $nave) {
+      if ($nave->getAveriado() && $nave->getCombustible() < 10) {
+        $nave->setAveriado(false);
+        $nave->setCombustible(100);
+        $navesReparadas[] = $nave->getNombre();
+      }
+    }
+    return $navesReparadas;
+  }
 }

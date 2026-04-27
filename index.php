@@ -24,3 +24,8 @@ echo "Naves con menos del 20% de combustible:\n";
 foreach ($navesMenosVeinte as $nave) {
   echo "- " . $nave->getNombre() . " (combustible: " . $nave->getCombustible() . ")\n";
 }
+
+$navesReparadas = $flota->repararYRepostar();
+foreach ($navesReparadas as $nombreNave) {
+  echo "La nave " . $nombreNave . " ha sido reparada.\n";
+}

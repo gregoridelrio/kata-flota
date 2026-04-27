@@ -30,4 +30,19 @@ class Nave
   {
     return $this->combustible;
   }
+
+  public function getAveriado(): bool
+  {
+    return $this->averiado;
+  }
+
+  public function setAveriado(bool $averiado): void
+  {
+    $this->averiado = $averiado;
+  }
+
+  public function setCombustible(int $combustible): void
+  {
+    $this->combustible = $combustible;
+  }
 }
